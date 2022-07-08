@@ -7,12 +7,165 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txt_pCoroa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="8dp"
+        android:text="Pressão Na Coroa: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_pCoroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_pCoroa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txt_ptopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pressão no topo: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pCoroa"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_ptopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_ptopo"
+        app:layout_constraintTop_toBottomOf="@+id/result_pCoroa"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txt_tcoroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Temperatura no coroa: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ttopo"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_ttopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 °C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_ttopo"
+        app:layout_constraintTop_toBottomOf="@+id/result_ptopo"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txt_ttopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Temperatura no topo: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ptopo"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_tcoroa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="600 °C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_tcoroa"
+        app:layout_constraintTop_toBottomOf="@+id/result_ttopo"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txt_vazao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Vazão: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tcoroa"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_vazao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18.000 Nm³"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_vazao"
+        app:layout_constraintTop_toBottomOf="@+id/result_tcoroa"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txt_secador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Secador de minerio: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vazao"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/result_secador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250 °C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_secador"
+        app:layout_constraintTop_toBottomOf="@+id/result_vazao"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/btn_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="Converter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
