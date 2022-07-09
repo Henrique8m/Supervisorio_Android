@@ -1,5 +1,6 @@
 package com.hrodriguesdev.supervisorioandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,7 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         val buttonConverter = findViewById<Button>(R.id.btn_converter)
         buttonConverter.setOnClickListener{
-            converter()
+//            converter()
+            val intent = Intent(this , MainActivity2().javaClass)
+
+            startActivity(intent)
+//            finish()
         }
     }
 
