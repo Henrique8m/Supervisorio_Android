@@ -4,6 +4,7 @@ import android.graphics.DashPathEffect
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.androidplot.util.PixelUtils
 import com.androidplot.xy.*
 import java.text.FieldPosition
@@ -16,6 +17,9 @@ class MainActivity2 : AppCompatActivity() {
     private var plot: XYPlot? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //Forçar Modo claro
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 

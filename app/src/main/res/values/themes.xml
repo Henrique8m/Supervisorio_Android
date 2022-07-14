@@ -14,6 +14,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.Henrique" parent="">
+        <!-- Primary brand color. -->
+        <item name="background">@color/purple_700</item>
+
+    </style>
+
     <style name="Theme.SupervisorioAndroid.Fullscreen" parent="Theme.SupervisorioAndroid">
         <item name="android:actionBarStyle">
             @style/Widget.Theme.SupervisorioAndroid.ActionBar.Fullscreen
