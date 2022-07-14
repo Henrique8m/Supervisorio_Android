@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         updatede()
+        //Forçar Modo claro
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         val buttonAtualizar = findViewById<Button>(R.id.btn_atualizar)
         buttonAtualizar.setOnClickListener{
             updatede()
         }
-
-        //Forçar Modo claro
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val buttonGrafico = findViewById<Button>(R.id.btn_grafico)
         buttonGrafico.setOnClickListener{

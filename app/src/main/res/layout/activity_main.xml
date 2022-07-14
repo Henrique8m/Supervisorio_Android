@@ -9,8 +9,12 @@
 
     <TableRow
         android:id="@+id/table_pcoroa"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pressão Na Coroa: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -29,14 +33,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.00"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </TableRow>
 
     <TableRow
         android:id="@+id/table_ptopo"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pressão no topo: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -55,14 +63,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.00"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </TableRow>
 
     <TableRow
         android:id="@+id/table_tcoroa"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperatura no coroa: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold"
 
             />
@@ -83,15 +95,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="000 °C"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </TableRow>
 
     <TableRow
         android:id="@+id/table_ttopo"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/table_tcoroa">
 
@@ -100,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperatura no topo: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -108,14 +125,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="000 °C"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </TableRow>
 
     <TableRow
         android:id="@+id/table_vazao"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vazão: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -134,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00.000 Nm³"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -174,8 +195,12 @@
 
     <TableRow
         android:id="@+id/table_secador"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -187,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Secador de minerio: "
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -195,8 +220,134 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="000 °C"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/table_s1"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_secador">
+
+        <TextView
+            android:id="@+id/txt_s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saida glendon 1: "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000 °C"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/table_s2"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_s1">
+
+        <TextView
+            android:id="@+id/txt_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saida glendon 2: "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000 °C"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/table_s3"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/my_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_s2">
+
+        <TextView
+            android:id="@+id/txt_s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saida glendon 3: "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000 °C"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/table_conection"
+        android:layout_width="414dp"
+        android:layout_height="39dp"
+        android:background="@color/ap_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_conection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NetWork conection"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_conection"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
