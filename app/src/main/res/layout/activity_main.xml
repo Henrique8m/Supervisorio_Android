@@ -159,40 +159,6 @@
             android:textStyle="bold" />
     </TableRow>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="409dp"
-        android:layout_height="66dp"
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btn_atualizar"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="28dp"
-            android:backgroundTint="#4CAF50"
-            android:text="Atualizar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_grafico"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="28dp"
-            android:backgroundTint="#4CAF50"
-            android:text="Grafico"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.884"
-            app:layout_constraintStart_toEndOf="@+id/btn_atualizar"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TableRow
         android:id="@+id/table_secador"
         android:layout_width="0dp"
@@ -349,5 +315,39 @@
             android:textStyle="bold" />
 
     </TableRow>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="409dp"
+        android:layout_height="66dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_atualizar"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="28dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Atualizar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mainview"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="28dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Grafico"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintStart_toEndOf="@+id/btn_atualizar"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

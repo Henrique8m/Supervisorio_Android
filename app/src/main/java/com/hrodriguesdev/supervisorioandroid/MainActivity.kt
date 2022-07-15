@@ -1,10 +1,8 @@
 package com.hrodriguesdev.supervisorioandroid
 
 import android.content.Intent
-import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
@@ -32,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             updatede()
         }
 
-        val buttonGrafico = findViewById<Button>(R.id.btn_grafico)
+        val buttonGrafico = findViewById<Button>(R.id.btn_mainview)
         buttonGrafico.setOnClickListener{
-            val intent = Intent(this , MainActivity2().javaClass)
+            val intent = Intent(this , PlotActivity().javaClass)
             startActivity(intent)
         }
     }
