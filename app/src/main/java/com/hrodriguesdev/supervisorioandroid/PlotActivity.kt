@@ -1,8 +1,11 @@
 package com.hrodriguesdev.supervisorioandroid
 
+import android.app.Activity
+import android.content.Intent
 import android.graphics.DashPathEffect
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.androidplot.util.PixelUtils
@@ -17,13 +20,21 @@ class PlotActivity : AppCompatActivity() {
     private var plot: XYPlot? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //Forçar Modo claro
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_plot)
 
+        val buttonMain = findViewById<Button>(R.id.btn_mainview)
+        buttonMain.setOnClickListener{
+            finish()
+//            val intent1 = Intent(this , MainActivity().javaClass)
+//            startActivity(intent1)
+
+        }
+
         // initialize our XYPlot reference:
+
         plot = findViewById<View>(R.id.plot) as XYPlot
 
         // create a couple arrays of y-values to plot:

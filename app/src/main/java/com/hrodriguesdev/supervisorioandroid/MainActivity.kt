@@ -1,10 +1,10 @@
 package com.hrodriguesdev.supervisorioandroid
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import org.json.JSONObject
 import java.net.URL
@@ -16,6 +16,7 @@ private lateinit var result_tcoroa: TextView
 private lateinit var result_ttopo: TextView
 private lateinit var result_vazao: TextView
 private lateinit var result_secador: TextView
+public var url:String = "https://supervisorio-monolitico.herokuapp.com/"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             updatede()
         }
 
-        val buttonGrafico = findViewById<Button>(R.id.btn_mainview)
+        val buttonGrafico = findViewById<Button>(R.id.btn_grafico)
         buttonGrafico.setOnClickListener{
             val intent = Intent(this , PlotActivity().javaClass)
             startActivity(intent)
@@ -48,17 +49,17 @@ class MainActivity : AppCompatActivity() {
 
         Thread {
             try{
-                val url = URL("https://supervisorio-gateway.herokuapp.com/pyrometry")
+                val url = URL(url + "instante")
                 val conn = url.openConnection() as HttpsURLConnection
                 try {
                     val data = conn.inputStream.bufferedReader().readText()
                     val obj = JSONObject(data)
                     val pcoroa = obj.getDouble("pcoroa")
                     val ptopo = obj.getDouble("ptopo")
-                    val tcoroa = obj.getDouble("tcoroa")
-                    val ttopo = obj.getDouble("ttopo")
+                    val tcoroa = obj.getInt("tcoroa")
+                    val ttopo = obj.getInt("ttopo")
                     val vazao = obj.getDouble("vazao")
-                    val secador = obj.getDouble("secador")
+                    val secador = obj.getInt("secador")
                     updatedeTela(pcoroa, ptopo, tcoroa, ttopo, vazao, secador)
 
                 }catch (e: Exception){
@@ -82,10 +83,10 @@ class MainActivity : AppCompatActivity() {
     private fun updatedeTela(
         pcoroa: Double,
         ptopo: Double,
-        tcoroa: Double,
-        ttopo: Double,
+        tcoroa: Int,
+        ttopo: Int,
         vazao: Double,
-        secador: Double
+        secador: Int
     ) {
         runOnUiThread {
 
