@@ -16,6 +16,7 @@ private lateinit var result_tcoroa: TextView
 private lateinit var result_ttopo: TextView
 private lateinit var result_vazao: TextView
 private lateinit var result_secador: TextView
+private lateinit var result_conection: TextView
 public var url:String = "https://supervisorio-monolitico.herokuapp.com/"
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         result_ttopo = findViewById(R.id.result_ttopo)
         result_vazao = findViewById(R.id.result_vazao)
         result_secador = findViewById(R.id.result_secador)
+        result_conection = findViewById(R.id.result_conection)
 
         Thread {
             try{
@@ -61,10 +63,11 @@ class MainActivity : AppCompatActivity() {
                     val vazao = obj.getDouble("vazao")
                     val secador = obj.getInt("secador")
                     updatedeTela(pcoroa, ptopo, tcoroa, ttopo, vazao, secador)
+                    result_conection.text = "Conected"
 
                 }catch (e: Exception){
                     runOnUiThread {
-                        result_pcoroa.text = "Exception 01"
+                        result_conection.text = "Exception 01"
                     }
                     e.printStackTrace()
                 }finally {
@@ -72,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }catch (e: Exception){
                 runOnUiThread {
-                    result_pcoroa.text = e.message
+                    result_conection.text = e.message
                 }
 
 
