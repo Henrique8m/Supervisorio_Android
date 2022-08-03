@@ -17,7 +17,7 @@ private lateinit var result_ttopo: TextView
 private lateinit var result_vazao: TextView
 private lateinit var result_secador: TextView
 private lateinit var result_conection: TextView
-public var url:String = "https://supervisorio-monolitico.herokuapp.com/"
+var url:String = "https://supervisorio-monolitico.herokuapp.com/"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
