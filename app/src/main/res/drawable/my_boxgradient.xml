@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="50dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="50dp" /> <!-- valor do arredondamento das bordas -->
+            <stroke
+                android:width="3dp"
+                android:color="#001853" /> <!-- cor da borda e tamanho dela -->
+            <padding
+                android:bottom="3dp"
+                android:left="8dp"
+                android:right="8dp"
+                android:top="1dp" /><!-- afastamento do texto -->
+            <gradient
+                android:angle="-90"
+                android:endColor="@color/black"
+                android:startColor="#0839B5" /> <!-- gradient color -->
+
+        </shape>
+    </item>
+</selector>

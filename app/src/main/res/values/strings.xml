@@ -14,4 +14,10 @@
     <string name="login_failed">"Login failed"</string>
     <string name="login">Login</string>
     <string name="grafico">Grafico</string>
+    <string name="_0">0</string>
+    <string name="topo">Topo</string>
+    <string name="c">ºC</string>
+    <string name="coroa">Coroa</string>
+    <string name="mmh_o">mmH²O</string>
+    <string name="nm_3">NM³</string>
 </resources>

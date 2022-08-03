@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Padding.Top.Sufixo">10dp</dimen>
+    <dimen name="Text.Size.Sufixo">22sp</dimen>
+    <dimen name="Margin.Start.Sufixo">4sp</dimen>
+
+    <dimen name="Margin.Top">4sp</dimen>
+
+    <dimen name="Text.Size.Information">32sp</dimen>
+    <dimen name="Padding.Right.Information">6dp</dimen>
+</resources>
