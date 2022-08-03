@@ -10,6 +10,7 @@ import org.json.JSONObject
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
+
 private lateinit var result_pcoroa: TextView
 private lateinit var result_ptopo: TextView
 private lateinit var result_tcoroa: TextView
@@ -17,7 +18,7 @@ private lateinit var result_ttopo: TextView
 private lateinit var result_vazao: TextView
 private lateinit var result_secador: TextView
 private lateinit var result_conection: TextView
-var url:String = "https://supervisorio-monolitico.herokuapp.com/"
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,11 +1,7 @@
 package com.hrodriguesdev.supervisorioandroid
 
 import android.annotation.SuppressLint
-import android.os.Build
-import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.MenuItem
+import android.os.*
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
@@ -14,12 +10,25 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.hrodriguesdev.supervisorioandroid.databinding.ActivityFullscreenBinding
+import org.json.JSONObject
+import java.net.URL
+import javax.net.ssl.HttpsURLConnection
+
+private lateinit var var_pcoroa: TextView
+private lateinit var var_ptopo: TextView
+private lateinit var var_tcoroa: TextView
+private lateinit var var_ttopo: TextView
+
+private lateinit var result_vazao: TextView
+private lateinit var result_secador: TextView
+private lateinit var result_conection: TextView
+var url:String = "https://supervisorio-monolitico.herokuapp.com/"
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class FullscreenActivity : AppCompatActivity() {
+class FullscreenActivity : AppCompatActivity(), Runnable{
 
     private lateinit var binding: ActivityFullscreenBinding
     private lateinit var fullscreenContent: ImageView
@@ -46,7 +55,7 @@ class FullscreenActivity : AppCompatActivity() {
     }
     private val showPart2Runnable = Runnable {
         // Delayed display of UI elements
-        supportActionBar?.show()
+//        supportActionBar?.show()
         fullscreenContentControls.visibility = View.VISIBLE
     }
     private var isFullscreen: Boolean = false
@@ -60,6 +69,7 @@ class FullscreenActivity : AppCompatActivity() {
      */
     private val delayHideTouchListener = View.OnTouchListener { view, motionEvent ->
         when (motionEvent.action) {
+
             MotionEvent.ACTION_DOWN -> if (AUTO_HIDE) {
                 delayedHide(AUTO_HIDE_DELAY_MILLIS)
             }
@@ -73,12 +83,15 @@ class FullscreenActivity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var handler: Handler = Handler()
+        handler.postDelayed(this, 10000)
+
 
         binding = ActivityFullscreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         isFullscreen = true
 
         // Set up the user interaction to manually show or hide the system UI.
@@ -92,8 +105,79 @@ class FullscreenActivity : AppCompatActivity() {
         // while interacting with the UI.
         binding.dummyButton.setOnTouchListener(delayHideTouchListener)
 
-
+        //Variaveis da view
+        var_pcoroa = binding.txtPreCoroa
+        var_ptopo = binding.txtPreTopo
+        var_tcoroa = binding.txtTmpCoroa
+        var_ttopo = binding.txtTmpTopo
     }
+
+        private fun updatede(){
+
+
+//            result_vazao = findViewById(R.id.result_vazao)
+//            result_secador = findViewById(R.id.result_secador)
+//            result_conection = findViewById(R.id.result_conection)
+//
+            Thread {
+                try{
+                    val url = URL(url + "instante")
+                    val conn = url.openConnection() as HttpsURLConnection
+                    try {
+                        val data = conn.inputStream.bufferedReader().readText()
+                        val obj = JSONObject(data)
+                        val pcoroa = obj.getDouble("pcoroa")
+                        val ptopo = obj.getDouble("ptopo")
+                        val tcoroa = obj.getInt("tcoroa")
+                        val ttopo = obj.getInt("ttopo")
+                        val vazao = obj.getDouble("vazao")
+                        val secador = obj.getInt("secador")
+                        updatedeTela(pcoroa, ptopo, tcoroa, ttopo, vazao, secador)
+//                        result_conection.text = "Conected"
+
+                    }catch (e: Exception){
+                        runOnUiThread {
+//                            result_conection.text = "Exception 01"
+                        }
+                        e.printStackTrace()
+                    }finally {
+                        conn.disconnect()
+                    }
+                }catch (e: Exception){
+                    runOnUiThread {
+//                        result_conection.text = e.message
+                    }
+
+
+                }
+            }.start()
+        }
+
+        private fun updatedeTela(
+            pcoroa: Double,
+            ptopo: Double,
+            tcoroa: Int,
+            ttopo: Int,
+            vazao: Double,
+            secador: Int
+        ) {
+            runOnUiThread {
+                //result.text = "R$ ${"%.4f".format(value.toDouble() * res)} "
+                var_pcoroa.text = pcoroa.toString()
+                var_ptopo.text = ptopo.toString()
+                var_tcoroa.text = tcoroa.toString()
+                var_ttopo.text = ttopo.toString()
+//                result_vazao.text = vazao.toString()
+//                result_secador.text = secador.toString()
+            }
+        }
+
+
+
+
+
+
+
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
@@ -166,5 +250,9 @@ class FullscreenActivity : AppCompatActivity() {
          * and a change of the status and navigation bar.
          */
         private const val UI_ANIMATION_DELAY = 300
+    }
+
+    override fun run() {
+        updatede()
     }
 }

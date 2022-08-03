@@ -62,7 +62,7 @@
                 android:fontFamily="serif"
                 android:text="@string/coroa"
                 android:textAlignment="center"
-                android:textColor="?android:attr/textColorPrimaryInverse"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -135,7 +135,7 @@
                 android:fontFamily="serif"
                 android:text="@string/topo"
                 android:textAlignment="center"
-                android:textColor="?android:attr/textColorPrimaryInverse"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
