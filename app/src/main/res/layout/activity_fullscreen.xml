@@ -14,10 +14,10 @@
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
         android:scaleType="fitXY"
         android:scaleX="1.13"
-        app:srcCompat="@mipmap/altoforno_fullscreen"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@mipmap/altoforno_fullscreen" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
