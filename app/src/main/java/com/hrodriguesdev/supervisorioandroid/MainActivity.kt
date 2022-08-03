@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 
         val buttonGrafico = findViewById<Button>(R.id.btn_grafico)
         buttonGrafico.setOnClickListener{
-            val intent = Intent(this , PlotActivity().javaClass)
+//            val intent = Intent(this , PlotActivity().javaClass)
+            val intent = Intent(this , FullscreenActivity().javaClass)
             startActivity(intent)
         }
     }

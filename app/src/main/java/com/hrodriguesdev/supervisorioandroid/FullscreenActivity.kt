@@ -5,9 +5,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +22,7 @@ import com.hrodriguesdev.supervisorioandroid.databinding.ActivityFullscreenBindi
 class FullscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFullscreenBinding
-    private lateinit var fullscreenContent: TextView
+    private lateinit var fullscreenContent: ImageView
     private lateinit var fullscreenContentControls: LinearLayout
     private val hideHandler = Handler(Looper.myLooper()!!)
 
@@ -76,7 +78,7 @@ class FullscreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        
         isFullscreen = true
 
         // Set up the user interaction to manually show or hide the system UI.
@@ -89,6 +91,8 @@ class FullscreenActivity : AppCompatActivity() {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         binding.dummyButton.setOnTouchListener(delayHideTouchListener)
+
+
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
