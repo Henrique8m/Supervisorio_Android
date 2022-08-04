@@ -1,6 +1,7 @@
 package com.hrodriguesdev.supervisorioandroid
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.*
 import android.view.MotionEvent
 import android.view.View
@@ -72,6 +73,10 @@ class FullscreenActivity : AppCompatActivity(), Runnable{
 
             MotionEvent.ACTION_DOWN -> if (AUTO_HIDE) {
                 delayedHide(AUTO_HIDE_DELAY_MILLIS)
+
+                val intent = Intent(this , ActivityGlendon().javaClass)
+                startActivity(intent)
+
             }
             MotionEvent.ACTION_UP -> view.performClick()
             else -> {

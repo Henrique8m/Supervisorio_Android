@@ -21,4 +21,11 @@
     <string name="mmh_o">mmH²O</string>
     <string name="nm_3">NM³</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_glendon">ActivityGlendon</string>
+    <string name="saida1">S1</string>
+    <string name="saida2">S2</string>
+    <string name="saida3">S3</string>
+    <string name="cq1">CQ 1</string>
+    <string name="cq2">CQ 2</string>
+    <string name="cq3">CQ 3</string>
 </resources>
