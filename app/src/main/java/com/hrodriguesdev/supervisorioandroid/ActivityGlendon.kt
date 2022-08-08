@@ -7,11 +7,14 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.navigation.fragment.NavHostFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hrodriguesdev.supervisorioandroid.databinding.ActivityGlendonBinding
 
 class ActivityGlendon : AppCompatActivity() {
@@ -32,7 +35,10 @@ class ActivityGlendon : AppCompatActivity() {
         fullscreenContentControls = binding.fullscreenContentControls
         fullscreenContent.setOnClickListener { hide() }
 
+
     }
+
+
 
     private fun hide() {
         supportActionBar?.hide()
