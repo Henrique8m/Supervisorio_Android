@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SupervisorioAndroid"
         tools:targetApi="31">
+        <activity android:name=".ScreenActivity">
+        </activity>
+
         <activity
             android:name=".ActivityGlendon"
             android:configChanges="orientation|keyboardHidden|screenSize"

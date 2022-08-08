@@ -74,7 +74,7 @@ class FullscreenActivity : AppCompatActivity(), Runnable{
             MotionEvent.ACTION_DOWN -> if (AUTO_HIDE) {
                 delayedHide(AUTO_HIDE_DELAY_MILLIS)
 
-                val intent = Intent(this , ActivityGlendon().javaClass)
+                val intent = Intent(this , ScreenActivity().javaClass)
                 startActivity(intent)
 
             }
@@ -88,6 +88,8 @@ class FullscreenActivity : AppCompatActivity(), Runnable{
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Atualização dos objetos em tela
         var handler: Handler = Handler()
         handler.postDelayed(this, 10000)
 
@@ -176,13 +178,6 @@ class FullscreenActivity : AppCompatActivity(), Runnable{
 //                result_secador.text = secador.toString()
             }
         }
-
-
-
-
-
-
-
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
