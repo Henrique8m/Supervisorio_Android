@@ -4,19 +4,333 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.SupervisorioAndroid.FullscreenContainer" >
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <ImageView
+        android:id="@+id/glendonfullscreen_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        android:scaleX="1.13"
+        app:srcCompat="@mipmap/glendon_fullscreen" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+     android:fitsSystemWindows. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_s1"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07">
+
+            <TextView
+                android:id="@+id/textViewSaida1"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/saida1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_s1"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewSaida12"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_s2"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/layout_s3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_s1">
+
+            <TextView
+                android:id="@+id/textViewSaida2"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/saida2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_s2"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewSaida22"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_s3"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.62">
+
+            <TextView
+                android:id="@+id/textViewSaida3"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/saida3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_s3"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewSaida32"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cq1"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/layout_s1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07">
+
+            <TextView
+                android:id="@+id/textViewCQ1"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/cq1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_cq1"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewCQ12"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cq2"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/layout_cq3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/layout_s2"
+            app:layout_constraintTop_toBottomOf="@+id/layout_cq1">
+
+            <TextView
+                android:id="@+id/textViewCQ2"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/cq2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_cq2"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewCQ22"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cq3"
+            android:layout_width="136dp"
+            android:layout_height="89dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/layout_s3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.62">
+
+            <TextView
+                android:id="@+id/textViewCQ3"
+                android:layout_width="132dp"
+                android:layout_height="40dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/cq3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_cq3"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewCQ32"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

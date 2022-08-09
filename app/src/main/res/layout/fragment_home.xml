@@ -4,19 +4,179 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:theme="@style/ThemeOverlay.SupervisorioAndroid.FullscreenContainer">
 
-    <TextView
-        android:id="@+id/text_home"
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView
+        android:id="@+id/fullscreen_content_dois"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        android:scaleX="1.13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/altoforno_fullscreen" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_coroa"
+            android:layout_width="191dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_topo">
+
+            <TextView
+                android:id="@+id/textViewCoroa1"
+                android:layout_width="189dp"
+                android:layout_height="45dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/coroa"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="191dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_coroa"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewCoroa2"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="97dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="191dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_pre_coroa"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewCoroa3"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="97dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/mmh_o" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_topo"
+            android:layout_width="191dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="76dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewTopo1"
+                android:layout_width="189dp"
+                android:layout_height="45dp"
+                android:background="@drawable/my_boxgradient"
+                android:fontFamily="serif"
+                android:text="@string/topo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="191dp"
+                android:layout_height="45dp"
+
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_tmp_topo"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewTopo2"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="97dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/c" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="191dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_pre_topo"
+                    style="@style/Theme.Information.Henrique"
+                    android:layout_width="90dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_information_text"
+
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewTopo"
+                    style="@style/Theme.Sufixo.Henrique"
+                    android:layout_width="97dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/my_box"
+                    android:text="@string/mmh_o" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

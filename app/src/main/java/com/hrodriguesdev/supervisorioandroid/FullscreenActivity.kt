@@ -74,7 +74,7 @@ class FullscreenActivity : AppCompatActivity(), Runnable{
             MotionEvent.ACTION_DOWN -> if (AUTO_HIDE) {
                 delayedHide(AUTO_HIDE_DELAY_MILLIS)
 
-                val intent = Intent(this , ScreenActivity().javaClass)
+                val intent = Intent(this , MainActivityNavBar().javaClass)
                 startActivity(intent)
 
             }

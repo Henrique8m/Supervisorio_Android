@@ -13,7 +13,6 @@ import android.view.View
 import android.view.WindowInsets
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hrodriguesdev.supervisorioandroid.databinding.ActivityGlendonBinding
 
@@ -37,8 +36,6 @@ class ActivityGlendon : AppCompatActivity() {
 
 
     }
-
-
 
     private fun hide() {
         supportActionBar?.hide()

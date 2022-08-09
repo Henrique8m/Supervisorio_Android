@@ -17,7 +17,7 @@
         android:theme="@style/Theme.SupervisorioAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name=".MainActivityNavBar"
             android:exported="false"
             android:label="@string/title_activity_main2" />
         <activity android:name=".ScreenActivity"></activity>

@@ -31,7 +31,7 @@
     <string name="slide_page">Slide Page</string>
     <string name="glendon_fire">Glendon</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Alto Forno</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Glendons</string>
 </resources>
