@@ -17,35 +17,24 @@
         android:theme="@style/Theme.SupervisorioAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivityNavBar"
-            android:exported="false"
-            android:label="@string/title_activity_main2" />
-        <activity android:name=".ScreenActivity"></activity>
-        <activity
-            android:name=".ActivityGlendon"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_glendon"
-            android:theme="@style/Theme.SupervisorioAndroid.Fullscreen" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:name=".NavBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nav_bar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".PlotActivity"
             android:exported="false" />
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true"
+            android:exported="false"
             android:label="Alto Forno Telemetria"
-            android:theme="@style/Theme.SupervisorioAndroid.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.SupervisorioAndroid.Fullscreen"/>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -21,15 +21,19 @@
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/drawable/my_box.xml" value="0.314" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/drawable/my_boxgradient.xml" value="0.314" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/drawable/my_information_text.xml" value="0.314" />
-        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_fullscreen.xml" value="0.16" />
+        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_fullscreen.xml" value="0.25" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_glendon.xml" value="0.33" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_main2.xml" value="0.32155797101449274" />
+        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_main_navbar.xml" value="0.18802083333333333" />
+        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_nav_bar.xml" value="0.33" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/activity_plot.xml" value="0.2708333333333333" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/fragment_dashboard.xml" value="0.3052536231884058" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/fragment_home.xml" value="0.3052536231884058" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/fragment_notifications.xml" value="0.3052536231884058" />
+        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/layout/simple_xy_plot_example.xml" value="0.2513586956521739" />
+        <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.21510416666666668" />
         <entry key="..\:/WorkSpace-Android/Supervisorio_Android/app/src/main/res/menu/menu_bottom_nav.xml" value="0.36666666666666664" />
         <entry key="..\:/workspace-Android/Supervisorio_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.309" />
         <entry key="..\:/workspace-Android/Supervisorio_Android/app/src/main/res/drawable/ic_alto_forno.xml" value="0.2835" />
