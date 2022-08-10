@@ -33,5 +33,5 @@
     <string name="title_home">Alto Forno</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Glendons</string>
-    <string name="title_activity_nav_bar">NavBarActivity</string>
+    <string name="title_activity_nav_bar">Supervisorio</string>
 </resources>

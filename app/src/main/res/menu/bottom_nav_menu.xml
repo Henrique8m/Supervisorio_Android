@@ -8,11 +8,11 @@
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_fire_glendon"
+        android:icon="@drawable/ic_glendon"
         android:title="@string/title_notifications" />
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_sala_de_maquina"
         android:title="@string/title_dashboard" />
 
 </menu>
