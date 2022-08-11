@@ -22,4 +22,17 @@
         android:name="com.hrodriguesdev.supervisorioandroid.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_grafico"
+        android:name="com.hrodriguesdev.supervisorioandroid.ui.grafico.GraficoFragment"
+        android:label="@string/title_grafico"
+        tools:layout="@layout/fragment_grafico" />
+
+    <fragment
+        android:id="@+id/navigation_carregamento"
+        android:name="com.hrodriguesdev.supervisorioandroid.ui.carregamento.CarregamentoFragment"
+        android:label="@string/title_carregamento"
+        tools:layout="@layout/fragment_carregamento" />
+
 </navigation>

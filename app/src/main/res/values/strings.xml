@@ -31,7 +31,10 @@
     <string name="slide_page">Slide Page</string>
     <string name="glendon_fire">Glendon</string>
     <string name="title_home">Alto Forno</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_dashboard">SLM</string>
     <string name="title_notifications">Glendons</string>
     <string name="title_activity_nav_bar">Supervisorio</string>
+    <string name="title_grafico">Graficos</string>
+    <string name="title_carregamento">Garregamento</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

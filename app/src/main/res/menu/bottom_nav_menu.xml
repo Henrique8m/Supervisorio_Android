@@ -14,5 +14,13 @@
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_sala_de_maquina"
         android:title="@string/title_dashboard" />
+    <item
+        android:id="@+id/navigation_grafico"
+        android:icon="@drawable/ic_grafico"
+        android:title="@string/title_grafico" />
+    <item
+        android:id="@+id/navigation_carregamento"
+        android:icon="@drawable/ic_carregamento"
+        android:title="@string/title_carregamento" />
 
 </menu>
