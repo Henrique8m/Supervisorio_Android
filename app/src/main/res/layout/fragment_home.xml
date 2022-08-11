@@ -39,10 +39,11 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_topo">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65999997">
 
             <TextView
-                android:id="@+id/textViewCoroa1"
+                android:id="@+id/textViewVazao"
                 android:layout_width="189dp"
                 android:layout_height="45dp"
                 android:background="@drawable/my_boxgradient"
@@ -86,7 +87,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txt_pre_coroa"
+                    android:id="@+id/txt_vazao"
                     style="@style/Theme.Information.Henrique"
                     android:layout_width="90dp"
                     android:layout_height="45dp"
@@ -109,10 +110,11 @@
             android:layout_width="191dp"
             android:layout_height="143dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="76dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024">
 
             <TextView
                 android:id="@+id/textViewTopo1"

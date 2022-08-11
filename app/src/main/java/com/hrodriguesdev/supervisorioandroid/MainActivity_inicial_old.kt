@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         result_ptopo = findViewById(R.id.result_ptopo)
         result_tcoroa = findViewById(R.id.result_tcoroa)
         result_ttopo = findViewById(R.id.result_ttopo)
-        result_vazao = findViewById(R.id.result_vazao)
+        result_vazao = findViewById(R.id.result_vazaoAntiga)
         result_secador = findViewById(R.id.result_secador)
         result_conection = findViewById(R.id.result_conection)
 

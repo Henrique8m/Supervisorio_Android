@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/layout_topo">
 
             <TextView
-                android:id="@+id/textViewCoroa1"
+                android:id="@+id/textViewVazao"
                 android:layout_width="189dp"
                 android:layout_height="45dp"
                 android:background="@drawable/my_boxgradient"
